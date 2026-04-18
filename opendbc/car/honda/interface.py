@@ -149,7 +149,7 @@ class CarInterface(CarInterfaceBase):
     elif candidate in (CAR.HONDA_HRV, CAR.HONDA_HRV_3G, CAR.HONDA_FIT_4G):
       ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 4096], [0, 4096]]
       if candidate == CAR.HONDA_HRV:
-        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.16], [0.025]]
+        ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.35], [0.011]]
         ret.wheelSpeedFactor = 1.025
       else:
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.8], [0.24]]  # TODO: can probably use some tuning
